@@ -1,210 +1,59 @@
-*{ 
-    box-sizing: border-box; 
-    font-family: sans-serif; 
-  } 
-  body{ 
-    margin: 0; 
-    padding: 0; 
-  } 
-  a{ 
-    text-decoration: none; 
-    color: #fff; 
-  } 
-    
-  /*Styling title*/
-  h1{ 
-    width: 100%; 
-    height: 80px; 
-    text-align: center; 
-    line-height: 80px; 
-    /* margin: 0;  */
-    /* padding: 0;  */
-    background-color: #47CF73; 
-  } 
-  h2{ 
-    color: #47CF73; 
-  } 
+/* * {
+  background-color: black;
+  color: white;
+} */
 
-  .parentTop {
-    width: 100%; 
-  }
-  .child {
-    float: left; 
-    width: 80%; 
-  }
-
-  .leftHeading {
-    /* margin-left: 70%; */
-    height: 100px;
-  }
-
-  .add-bookmark-button {
-    /* margin-left: 50%; */
-    text-align: center; 
-    line-height: 80px;
-    height: 100px;
-  }
-
-  .container{ 
-    width: 600px; 
-    min-height: 150px; 
-    background-color:  #333333; 
-    margin: 0 auto; 
-  } 
-
-  
-.modal-overlay {
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.top-heading{
+  text-align: center;
 }
-    
-  /*Styling form section*/
-  .form{ 
-    width: 100%; 
-    height: auto; 
-    background-color: #555555; 
-    padding: 40px 50px; 
-    margin: 20px 0; 
-      
-  } 
-  .input-field{ 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-bottom: 15px;  
-  } 
-  .input-field input[type="text"]{ 
-    width: 250px; 
-    height: 25px; 
-    outline: none; 
-    border: none; 
-    background-color: transparent; 
-    border-bottom: 2px solid #47CF73; 
-    padding-left: 10px; 
-    color: #fff; 
-  } 
-  .input-field label{ 
-    color: #47CF73; 
-    font-weight: bold; 
-    margin-bottom: 5px; 
-  } 
-  .save_button{ 
-    display: block; 
-    margin: 0 auto; 
-    border: none; 
-    width: 70px; 
-    height: 25px; 
-    background-color: #47CF73; 
-    color: #000; 
-    cursor: pointer; 
-    outline: none; 
-  } 
-    
-  /*Styling Bookmarks section*/
-  .bookmarks{ 
-    width: 100%; 
-    background-color: #555555; 
-    padding: 20px; 
-    overflow: scroll;
-  } 
-  .bookmark{ 
-    /* display: flex;  */
-    /* align-items: center;  */
-    width: 100%; 
-    height: 40px; 
-    padding: 5px 20px; 
-    background-color: #555555; 
-    margin-bottom: 10px;
-  } 
-  .bookmark span{ 
-    flex: 1; 
-    font-weight: bold; 
-    letter-spacing: 1.5px; 
-    color: #fff; 
-  } 
-  .bookmark .visit{ 
-    width: 50px; 
-    height: 25px; 
-    line-height: 25px; 
-    text-align: center; 
-    background-color: #47CF73; 
-    color: #000; 
-    border-radius: 5px; 
-    margin: 0 5px; 
-  } 
-  .bookmark .delete{ 
-    width: 60px; 
-    height: 25px; 
-    line-height: 25px; 
-    text-align: center; 
-    background-color: #F44336; 
-    border-radius: 5px; 
-  }
+
+h1 {
+  display: inline-block;
+  text-align: center;
+}
+
+.add-bookmark-button {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 33px;
+  position: absolute;
+}
+
+.bookmarks {
+  display: inline-block;
+  width: 45%;
+}
+
+.details {
+  margin-top: 15px;
+  margin-left: 5%;
+  position: absolute;
+  display: inline-block;
+}
 
 .hide {
-    display: none;
+  display: none;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding-top: 20%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 
-/* #addBookmark input[name="name"] {
-    grid-area: name;
-  }
-  
-  #addBookmark input[name="age"] {
-    grid-area: age;
-  }
-  
-  #addBookmark input[name="roll"] {
-    grid-area: roll;
-  } */
-  
-  #addBookmarkForm .save-button {
-    grid-area: save-button;
-  }
-
-  #addBookmarkForm .plus-button {
-    width: 20px;
-    grid-area: plus-button;
-    display: inline-block;
-  }
-
-  #addBookmarkForm .cancel-button {
-    grid-area: cancel-button;
-  }
-  
-  #addBookmarkForm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "title title"
-      "url category"
-      "cancel-button save-button";
-  }
-  
-  #addBookmarkForm * {
-    margin: 7px;
-    padding: 7px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-  }
-  
-  #addBookmarkForm input {
-    border: 3px solid #6495ed;
-    outline: none;
-  }
-  
-  #addBookmarkForm input:focus {
-    border: 3px solid #367bfa;
-  }
-  
-  #addBookmarkForm button:active {
-    border-color: #367bfa;
-  }
+.bookmark {
+  /* background-color: blue; */
+  height: 200px;
+  max-height: auto;
+  width: 100%;
+  overflow: scroll;
+}

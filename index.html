@@ -1,48 +1,82 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <title>Bookmark Manager</title> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <!-- link the CSS file here -->
-    <link rel="stylesheet" type="text/css" href="styles.css">   
-</head> 
+<!DOCTYPE html>
+<html lang="en">
+<!-- title url category -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmark Manager</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet"> -->
+  <link href="./styles.css" rel="stylesheet">
+</head>
+
 <body>
-    <div class="parentTop">
-        <div class="child">
-            <div class="leftHeading">
-                <h1>Bookmark Manager</h1>
-            </div>
-        </div>
-        <div class="add-bookmark-button">
-            <button type="button">Add Bookmark</button>
-        </div>
-    </div>
-
-
-    <div class="modal-overlay hide">
-      <h1>Add Bookmark</h1>
-      <form id="addBookmarkForm">
-        <input type="text" placeholder="Title" name="title" required maxlength="30" />
-        <input type="url" placeholder="Url" name="url" required />
-        <!-- <input type="number" placeholder="Category" name="category" required /> -->
-        <select id="categoriesDropDown" placeholder="Category" name="category" required>
-        </select>
-        <button type="button" class="plus-button">+</button>
-        <button type="button" class="cancel-button">Cancel</button>
-        <button class="save-button">Save</button>
-      </form>
-    </div>
-  
-  
-  <div class="container"> 
-    <div class="bookmarks"></div>
-    <div class="details"></div>
+  <div class="top-heading">
+    <h1>Bookmark Manager</h1>
+    <button class="add-bookmark-button" type="button" onclick="openModal()">Add Bookmark</button>
   </div>
   
-  
-  
-  <!-- link the JavaScript file here -->
-  <script src="./app.js"></script> 
-</body> 
+  <div class="modal-overlay hide">
+    <h2>Add Bookmark</h2>
+    <form id="addBookmarkForm">
+      <p>
+        <label for="title">Title: <input type="text" id="title" placeholder="Title" name="title" required maxlength="30" /></label>
+      </p>
+      
+      <p>
+        <label for="url">URL: <input type="url" id="url" placeholder="URL" name="url" required /></label>
+      </p>
+
+      <p>
+        <label for="category">Category: <select id="category" placeholder="Category" name="category" required>
+        </select></label>
+
+        <button type="button" class="plus-button" onclick="newCategory()">+</button>
+      </p>
+      
+      <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
+      <button class="save-button">Save</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="bookmarks">
+      <h3>Category1</h3>
+      <div class="bookmark">
+        <p>Bookmark1</p>
+        <p>Bookmark2</p>
+        <p>Bookmark3</p>
+        <p>Bookmark4</p>
+        <p>Bookmark1</p>
+        <p>Bookmark2</p>
+        <p>Bookmark3</p>
+        <p>Bookmark4</p>
+      </div>
+      <h3>Category2</h3>
+      <div class="bookmark">
+        <p>Bookmark5</p>
+        <p>Bookmark6</p>
+        <p>Bookmark7</p>
+        <p>Bookmark8</p>
+      </div>
+      <h3>Category3</h3>
+      <div class="bookmark">
+        <p>Bookmark9</p>
+        <p>Bookmark10</p>
+        <p>Bookmark11</p>
+        <p>Bookmark12</p>
+      </div>
+      <h3>Category4</h3>
+      <div class="bookmark">
+        <p>Bookmark13</p>
+        <p>Bookmark14</p>
+        <p>Bookmark15</p>
+        <p>Bookmark16</p>
+      </div>
+    </div>
+    <div class="details">BOOKMARK DETAILS HERE</div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+
 </html>
