@@ -24,11 +24,12 @@ h1 {
   width: 45%;
 }
 
-.details {
-  margin-top: 15px;
+.details-section {
+  margin-top: 17px;
   margin-left: 5%;
   position: absolute;
   display: inline-block;
+  font-weight: bold;
 }
 
 .hide {
@@ -56,4 +57,9 @@ h1 {
   max-height: auto;
   width: 100%;
   overflow: scroll;
+}
+
+.details {
+  margin-top: 20px;
+  font-weight: normal;
 }

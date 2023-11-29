@@ -30,11 +30,11 @@
         <label for="category">Category: <select id="category" placeholder="Category" name="category" required>
         </select></label>
 
-        <button type="button" class="plus-button" onclick="newCategory()">+</button>
+        <button type="button" class="plus-button" onclick="addNewCategory()">+</button>
       </p>
       
       <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
-      <button class="save-button">Save</button>
+      <button type="submit" class="save-button">Save</button>
     </form>
   </div>
 
@@ -42,14 +42,8 @@
     <div class="bookmarks">
       <h3>Category1</h3>
       <div class="bookmark">
-        <p>Bookmark1</p>
-        <p>Bookmark2</p>
-        <p>Bookmark3</p>
-        <p>Bookmark4</p>
-        <p>Bookmark1</p>
-        <p>Bookmark2</p>
-        <p>Bookmark3</p>
-        <p>Bookmark4</p>
+        <p>Bookmark1 <input type="button" onclick="displayDetails('Bookmark1')" value="Details"/></p>
+        <p>Bookmark2 <input type="button" onclick="displayDetails('Bookmark2')" value="Details"/></p>
       </div>
       <h3>Category2</h3>
       <div class="bookmark">
@@ -73,7 +67,10 @@
         <p>Bookmark16</p>
       </div>
     </div>
-    <div class="details">BOOKMARK DETAILS HERE</div>
+    <div class="details-section">
+      Selected Bookmark Details:
+      <div class="details" id="details"></div>
+    </div>
   </div>
   <script src="./app.js"></script>
 </body>
