@@ -30,7 +30,7 @@
         <label for="category">Category: <select id="category" placeholder="Category" name="category" required>
         </select></label>
 
-        <button type="button" class="plus-button" onclick="addNewCategory()">+</button>
+        <button type="button" id="plus-button" class="plus-button" onclick="addNewCategory()">+</button>
       </p>
       
       <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
@@ -39,34 +39,7 @@
   </div>
 
   <div class="container">
-    <div class="bookmarks">
-      <h3>Category1</h3>
-      <div class="bookmark">
-        <p>Bookmark1 <input type="button" onclick="displayDetails('Bookmark1')" value="Details"/></p>
-        <p>Bookmark2 <input type="button" onclick="displayDetails('Bookmark2')" value="Details"/></p>
-      </div>
-      <h3>Category2</h3>
-      <div class="bookmark">
-        <p>Bookmark5</p>
-        <p>Bookmark6</p>
-        <p>Bookmark7</p>
-        <p>Bookmark8</p>
-      </div>
-      <h3>Category3</h3>
-      <div class="bookmark">
-        <p>Bookmark9</p>
-        <p>Bookmark10</p>
-        <p>Bookmark11</p>
-        <p>Bookmark12</p>
-      </div>
-      <h3>Category4</h3>
-      <div class="bookmark">
-        <p>Bookmark13</p>
-        <p>Bookmark14</p>
-        <p>Bookmark15</p>
-        <p>Bookmark16</p>
-      </div>
-    </div>
+    <div class="bookmarks"></div>
     <div class="details-section">
       Selected Bookmark Details:
       <div class="details" id="details"></div>
